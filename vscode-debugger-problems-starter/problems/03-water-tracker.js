@@ -18,7 +18,6 @@ recurison
 */
 
 function adequateWaterTracker(calendar) {
-=======
   let noWater = 0;
   let water = 0;
 
