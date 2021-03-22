@@ -9,23 +9,18 @@ recycled.`
 
 If an item is made of aluminum or paper then it can be recycled and should
 return `Recycle Me!`
+console.log(shouldRecycle(styrofoamContainer)); // 'Cannot be recycled.'
 
-*/
+const saladContainer = {
+  plastic: true,
+  color: 'black',
+  aluminum: false,
+  paper: false
+};
 
+console.log(shouldRecycle(saladContainer)); // 'Currently, cannot be recycled.'
 
-function shouldRecycle(item) {
-  if (!item.plastic) {
-    return 'Recycle Me!'
-  } else if (item.color === 'black') {
-    return 'Currently, cannot be recycled.'
-  } else if (item.aluminum) {
-    return 'Recycle Me!'
-  } else if (item.paper) {
-    return 'Recycle Me!'
-  }
-  return 'Cannot be recycled'
-}
-
+////////////////////////
 
 const waterBottle = {
   plastic: true,
@@ -45,14 +40,22 @@ const tomatoCan = {
 
 console.log(shouldRecycle(tomatoCan)); // 'Recycle Me!'
 
-const saladContainer = {
-  plastic: true,
-  color: 'black',
-  aluminum: false,
-  paper: false
-};
+*/
 
-console.log(shouldRecycle(saladContainer)); // 'Currently, cannot be recycled.'
+
+function shouldRecycle(item) {
+  if (item.plastic && item.color !== 'black') {
+    return 'Recycle Me!'
+  } else if (item.color === 'black' && item.plastic) {
+    return 'Currently, cannot be recycled.'
+  } else if (item.aluminum) {
+    return 'Recycle Me!'
+  } else if (item.paper) {
+    return 'Recycle Me!'
+  }
+  return 'Cannot be recycled';
+}
+
 
 const styrofoamContainer = {
   plastic: false,
@@ -61,4 +64,3 @@ const styrofoamContainer = {
   paper: false
 };
 
-console.log(shouldRecycle(styrofoamContainer)); // 'Cannot be recycled.'
