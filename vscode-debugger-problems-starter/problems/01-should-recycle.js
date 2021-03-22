@@ -31,14 +31,6 @@ const waterBottle = {
 
 console.log(shouldRecycle(waterBottle)); // 'Recycle Me!'
 
-const tomatoCan = {
-  plastic: false,
-  color: 'red',
-  aluminum: true,
-  paper: false
-};
-
-console.log(shouldRecycle(tomatoCan)); // 'Recycle Me!'
 
 */
 
@@ -64,3 +56,12 @@ const styrofoamContainer = {
   paper: false
 };
 
+
+const tomatoCan = {
+  plastic: false,
+  color: 'red',
+  aluminum: true,
+  paper: false
+};
+
+console.log(shouldRecycle(tomatoCan)); // 'Recycle Me!'
